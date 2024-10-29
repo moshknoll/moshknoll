@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>חתולים מאושרים - מצאו את החבר החדש שלכם</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/api/placeholder/1200/600');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            background-color: #e74c3c;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #c0392b;
+        }
+
+        .features {
+            padding: 4rem 2rem;
+            text-align: center;
+            background-color: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            padding: 2rem;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .feature-card i {
+            font-size: 2.5rem;
+            color: #e74c3c;
+            margin-bottom: 1rem;
+        }
+
+        .cats-gallery {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .cat-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .cat-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .cat-info {
+            padding: 1.5rem;
+        }
+
+        .contact-form {
+            padding: 4rem 2rem;
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 5px;
+            margin-top: 0.5rem;
+        }
+
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>חתולים מאושרים 🐱</h2>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>מצאו את החבר החדש שלכם</h1>
+            <p>חתולים מתוקים ומאומנים מחכים לבית חם ואוהב</p>
+            <button class="cta-button">צרו קשר עכשיו</button>
+        </div>
+    </section>
+
+    <section class="features">
+        <h2>למה לאמץ מאיתנו?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-heart"></i>
+                <h3>חתולים מאומנים</h3>
+                <p>כל החתולים שלנו מאומנים לשימוש בארגז חול ומחוסנים</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-medal"></i>
+                <h3>אחריות מלאה</h3>
+                <p>תמיכה וליווי מלא בתהליך האימוץ ולאחריו</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-check-circle"></i>
+                <h3>בדיקות רפואיות</h3>
+                <p>כל החתולים עוברים בדיקות וטרינר מקיפות</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cats-gallery">
+        <h2>החתולים שלנו</h2>
+        <div class="gallery-grid">
+            <div class="cat-card">
+                <img src="/api/placeholder/400/300" alt="חתול 1">
+                <div class="cat-info">
+                    <h3>מיצי</h3>
+                    <p>חתולה פרסית בת שנה, אוהבת ליטופים</p>
+                </div>
+            </div>
+            <div class="cat-card">
+                <img src="/api/placeholder/400/300" alt="חתול 2">
+                <div class="cat-info">
+                    <h3>שמנמן</h3>
+                    <p>חתול בריטי בן שנתיים, שובב ומתוק</p>
+                </div>
+            </div>
+            <div class="cat-card">
+                <img src="/api/placeholder/400/300" alt="חתול 3">
+                <div class="cat-info">
+                    <h3>לונה</h3>
+                    <p>חתולת רחוב מאומצת, חברותית במיוחד</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-form">
+        <h2>צרו קשר</h2>
+        <div class="form-container">
+            <form>
+                <div class="form-group">
+                    <input type="text" placeholder="שם מלא">
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="אימייל">
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="טלפון">
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="הודעה" rows="5"></textarea>
+                </div>
+                <button type="submit" class="cta-button">שליחה</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>חתולים מאושרים © 2024 כל הזכויות שמורות</p>
+        <p>טלפון: 054-1234567 | אימייל: info@happycats.co.il</p>
+    </footer>
+</body>
+</html>
